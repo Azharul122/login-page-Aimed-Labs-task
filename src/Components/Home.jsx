@@ -1,17 +1,18 @@
 import React from "react";
+import "./Home.css";
 
 const Home = () => {
   return (
     <div className="w-full py-5 md:py-0">
       <div className="w-[96%] md:w-[90%] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5  justify-items-center items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5  justify-items-center items-center">
+          {/* Left Side */}
           <div className="">
             <svg
-              height="400"
               viewBox="0 0 544 634"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-full"
+              className="w-full md:h-[500px]"
             >
               <g clipPath="url(#clip0_1_41)">
                 <path
@@ -138,9 +139,10 @@ const Home = () => {
               </defs>
             </svg>
           </div>
-          <div className="rightSide flex justify-center items-center w-full py-20">
+          {/* Right Side */}
+          <div className="rightSide flex justify-center items-center w-full md:py-20 py-5">
             <div className="contain w-[100%] md:w-[90%]">
-              <p className="heading text-xl font-bold text-[#04072F] mb-3 text-center">
+              <p className="heading text-[48px] font-bold text-[#04072F] mb-3 text-center">
                 Login
               </p>
               <p className="mb-2">Login Id</p>
@@ -156,31 +158,36 @@ const Home = () => {
                 placeholder="Enter Password"
               />
               <div className="flex items-center justify-between">
-                <div className="flex gap-2 items-center">
-                  <input type="checkbox" name="" id="" />
-                  <p>Remember Me</p>
-                </div>
+                <label htmlFor="password" className="purple_checkbox">
+                  <input
+                    type="checkbox"
+                    name="password"
+                    id=""
+                    className="form-checkbox"
+                  />
+                  {"  "}Remember Me
+                </label>
                 <p className="text-[#F78719]">
-                  <a href="">Change Password</a>
+                  <a href="#">Change Password</a>
                 </p>
               </div>
-              <div className="flex gap-2 items-center pt-3 pb-5">
-                <input type="checkbox" name="" id="" />
-                <p className="">
-                  Agree to{" "}
-                  <span className="text-[#F78719]">
-                    <a href="">Terms & Conditions</a>
-                  </span>
-                </p>
-              </div>
+
+              <label htmlFor="password" className=" mt-5 pb-5">
+                <input type="checkbox" name="password" id="" className="" />
+                {"  "}Agree to{" "}
+                <span className="text-[#F78719]">
+                  <a href="#">Terms & Conditions</a>
+                </span>
+              </label>
+
               <div className="flex justify-center items-center flex-col gap-10 py-5">
-                <button className="bg-[#1575A7] px-5 py-2 w-[70%] text-center">
+                <button className="bg-gradient-to-l to-[#6366F1] from-[#1575A7] px-5 py-2 w-[70%] text-center">
                   Login
                 </button>
                 <p className="">
                   Don’t have an account?{" "}
                   <span className="text-[#F78719]">
-                    <a href="">Register Here</a>
+                    <a href="#">Register Here</a>
                   </span>
                 </p>
               </div>
